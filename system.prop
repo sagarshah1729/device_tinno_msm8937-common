@@ -79,6 +79,9 @@ ro.core_ctl_max_cpu=4
 # CNE
 persist.cne.feature=1
 
+#selects Console configuration to enable
+persist.console.silent.config=1
+
 # Display
 debug.sf.hw=1
 debug.egl.hw=1
