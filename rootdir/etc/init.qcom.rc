@@ -483,7 +483,6 @@ on property:bluetooth.startbtsnoop=false
     stop btsnoop
 
 on property:vold.decrypt=trigger_restart_framework
-    start config_bt_addr
     start config_bluetooth
     start wcnss-service
 
@@ -514,13 +513,7 @@ service rmt_storage /system/bin/rmt_storage
 service tftp_server /system/bin/tftp_server
    class core
    user root
-    writepid /dev/cpuset/system-background/tasks
-
-service config_bt_addr /system/bin/btnvtool -O
-    class core
-    user bluetooth
-    group bluetooth radio
-    oneshot
+   writepid /dev/cpuset/system-background/tasks
 
 service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
     class late_start
