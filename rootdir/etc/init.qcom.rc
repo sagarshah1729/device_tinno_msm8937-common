@@ -278,8 +278,8 @@ on post-fs-data
     chown dhcp dhcp /data/misc/dhcp
 
     #create netmgr log dir
-    mkdir /data/misc/netmgr 0770 radio radio
-    chmod 0770 /data/misc/netmgr
+    mkdir /data/vendor/misc/netmgr 0770 radio radio
+    chmod 0770 /data/vendor/misc/netmgr
 
     # Create the directories used by CnE subsystem
     mkdir /data/connectivity 0771 system system
@@ -539,7 +539,7 @@ service bt-dun /system/bin/dun-server /dev/smd7 /dev/rfcomm0
     disabled
     oneshot
 
-service netmgrd /system/bin/netmgrd
+service netmgrd /system/vendor/bin/netmgrd
     class main
     writepid /dev/cpuset/system-background/tasks
 
