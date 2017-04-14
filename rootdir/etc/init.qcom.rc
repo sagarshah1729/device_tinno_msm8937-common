@@ -241,6 +241,7 @@ on post-fs
     start qseecomd
 
     chown system system /sys/class/backlight/panel0-backlight/brightness
+    chown system system /sys/class/backlight/panel0-backlight/max_brightness
 
 # msm specific files that need to be created on /data
 on post-fs-data
