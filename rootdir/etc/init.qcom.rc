@@ -236,6 +236,9 @@ on post-fs-data
     mkdir /data/misc/stargate/calib_test 0770 system system
     mkdir /data/misc/stargate/database 0770 system system
 
+    # Create directory used by media clients
+    mkdir /data/vendor/media 0770 mediacodec media
+
     # create QDMA dropbox
     mkdir /data/vendor/qdmastats 0700 system system
     mkdir /data/vendor/qdma 0770 system system
