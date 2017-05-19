@@ -445,7 +445,7 @@ service perfd /system/vendor/bin/perfd
    socket perfd seqpacket 0666 root system
    writepid /dev/cpuset/system-background/tasks
 
-service iop /system/bin/iop
+service iop /system/vendor/bin/iop
     class main
     user root
     group root
@@ -509,7 +509,7 @@ service irsc_util /system/bin/irsc_util "/etc/sec_config"
     user root
     oneshot
 
-service rmt_storage /system/bin/rmt_storage
+service rmt_storage /vendor/bin/rmt_storage
     class core
     user root
     writepid /dev/cpuset/system-background/tasks
@@ -690,7 +690,7 @@ service qseeproxydaemon /system/vendor/bin/qseeproxydaemon
 on charger
     setprop persist.sys.usb.config charging
 
-service time_daemon /system/bin/time_daemon
+service time_daemon /system/vendor/bin/time_daemon
     class main
     user root
     group root
