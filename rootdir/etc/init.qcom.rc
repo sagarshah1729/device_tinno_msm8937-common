@@ -236,6 +236,10 @@ on post-fs-data
     mkdir /data/misc/stargate/calib_test 0770 system system
     mkdir /data/misc/stargate/database 0770 system system
 
+    # create QDMA dropbox
+    mkdir /data/vendor/qdmastats 0700 system system
+    mkdir /data/vendor/qdma 0770 system system
+
     # Create directory for TZ Apps
     mkdir /data/misc/qsee 0770 system system
 
@@ -709,3 +713,8 @@ on property:persist.sys.fp.goodix=0
 
 on property:persist.sys.fp.silead=0
     stop fpsvcd
+
+service qdmastatsd /system/vendor/bin/qdmastatsd
+    class late_start
+    user system
+    group system
