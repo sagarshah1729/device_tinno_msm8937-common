@@ -494,7 +494,7 @@ service rmt_storage /vendor/bin/rmt_storage
     user root
     writepid /dev/cpuset/system-background/tasks
 
-service tftp_server /system/vendor/bin/tftp_server
+service tftp_server /vendor/bin/tftp_server
    class core
    user root
    writepid /dev/cpuset/system-background/tasks
