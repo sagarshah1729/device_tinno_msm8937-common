@@ -676,6 +676,8 @@ service qseeproxydaemon /system/vendor/bin/qseeproxydaemon
 
 on charger
     setprop persist.sys.usb.config charging
+    load_system_props
+    start qcom-post-boot
 
 service time_daemon /system/vendor/bin/time_daemon
     class main
