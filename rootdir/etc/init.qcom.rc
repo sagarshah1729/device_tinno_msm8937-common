@@ -681,7 +681,7 @@ service qseeproxydaemon /system/vendor/bin/qseeproxydaemon
     writepid /dev/cpuset/system-background/tasks
 
 on charger
-    setprop persist.sys.usb.config charging
+    setprop persist.sys.usb.config mass_storage
     load_system_props
     start qcom-post-boot
 
