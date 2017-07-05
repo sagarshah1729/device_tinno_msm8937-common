@@ -401,12 +401,12 @@ on post-fs-data
     chmod 0660 /data/vendor/radio/db_check_done
 
     # qti-logkit data
-    mkdir /data/misc/qti-logkit/ 0771 system system
-    mkdir /data/misc/qti-logkit/shared-privileged/ 2770 system system
-    mkdir /data/misc/qti-logkit/shared-public/ 2770 system diag
-    mkdir /data/misc/qti-logkit/socket-privileged/ 2770 system system
-    mkdir /data/misc/qti-logkit/socket-public/ 2750 system diag
-    mkdir /data/misc/qti-logkit/logdata/ 2750 system shell
+    mkdir /data/vendor/misc/qti-logkit/ 0771 system system
+    mkdir /data/vendor/misc/qti-logkit/shared-privileged/ 2770 system system
+    mkdir /data/vendor/misc/qti-logkit/shared-public/ 2770 system diag
+    mkdir /data/vendor/misc/qti-logkit/socket-privileged/ 2770 system system
+    mkdir /data/vendor/misc/qti-logkit/socket-public/ 2750 system diag
+    mkdir /data/vendor/misc/qti-logkit/logdata/ 2750 system shell
 
     #Create SWAP related dirs
     mkdir /data/system/swap 0770 root system
