@@ -223,6 +223,9 @@ on post-fs
     chown system system /sys/class/backlight/panel0-backlight/brightness
     chown system system /sys/class/backlight/panel0-backlight/max_brightness
 
+    # Create vpp directory
+    mkdir /persist/vpp 0770 media media
+
     # Allow access to sensors device attributes
     chown system system /sys/class/sensors/MPU6050-accel/enable
     chown system system /sys/class/sensors/MPU6050-accel/poll_delay
@@ -404,6 +407,9 @@ on post-fs-data
     # set aggressive read ahead for dm-0 and dm-1 during boot up
     write /sys/block/dm-0/queue/read_ahead_kb 2048
     write /sys/block/dm-1/queue/read_ahead_kb 2048
+
+    # Create vpp directory
+    mkdir /data/vendor/vpp 0770 media media
 
     # WAPI
     mkdir /data/misc/wapi_certificate 0770 system wifi
@@ -731,3 +737,8 @@ service qdmastatsd /system/vendor/bin/qdmastatsd
     class late_start
     user system
     group system net_bw_stats radio
+
+service vppservice /vendor/bin/vppservice
+    class main
+    user media
+    group camera
