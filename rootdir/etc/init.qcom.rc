@@ -240,6 +240,8 @@ on post-fs-data
     mkdir /data/misc/stargate/calib_test 0770 system system
     mkdir /data/misc/stargate/database 0770 system system
 
+    mkdir /data/vendor/misc 01771 system system
+
     # Change lm related dirs
     mkdir /data/vendor/lm 0700 root root
 
