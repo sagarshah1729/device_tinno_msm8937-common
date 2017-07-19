@@ -26,7 +26,6 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-
 target=`getprop ro.board.platform`
 
 function configure_memory_parameters() {
@@ -331,6 +330,10 @@ case "$target" in
 
                 # Enable low power modes
                 echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
+
+        	#Disable CX PC
+        	echo 49 385 > /d/regulator/soc:rpmh-regulator-cxlvl-pm8998_s9_level/voltage
+                echo 1 > /d/regulator/soc:rpmh-regulator-cxlvl-pm8998_s9_level/enable
 
                 # SMP scheduler
                 echo 85 > /proc/sys/kernel/sched_upmigrate
