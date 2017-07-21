@@ -528,6 +528,7 @@ service rmt_storage /vendor/bin/rmt_storage
     class core
     user root
     shutdown critical
+    ioprio rt 0
     writepid /dev/cpuset/system-background/tasks
 
 service tftp_server /vendor/bin/tftp_server
