@@ -535,6 +535,7 @@ service irsc_util /system/bin/irsc_util "/etc/sec_config"
 service rmt_storage /vendor/bin/rmt_storage
     class core
     user root
+    shutdown critical
     writepid /dev/cpuset/system-background/tasks
 
 service tftp_server /vendor/bin/tftp_server
