@@ -558,7 +558,6 @@ service bt-dun /system/bin/dun-server /dev/smd7 /dev/rfcomm0
     user bluetooth
     group bluetooth net_bt_admin inet
     disabled
-    seclabel u:r:bluetooth:s0
     oneshot
 
 service netmgrd /system/vendor/bin/netmgrd
