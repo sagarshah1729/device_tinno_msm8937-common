@@ -1,6 +1,9 @@
 # ART
 ro.sys.fw.dex2oat_thread_count=4
 
+# Adreno
+ro.qcom.adreno.qgl.ShaderStorageImageExtendedFormats=0
+
 # Audio
 #Reduce client buffer size for fast audio output tracks
 af.fast_track_multiplier=2
