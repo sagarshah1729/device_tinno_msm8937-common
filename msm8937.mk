@@ -197,6 +197,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-service-qti
 
 PRODUCT_PACKAGES += \
+    apdr.conf \
     flp.conf \
     gps.conf \
     izat.conf \
