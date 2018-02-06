@@ -25,6 +25,6 @@ LOCAL_C_INCLUDES := \
 LOCAL_CPPFLAGS := -Wall
 LOCAL_SRC_FILES := init_msm8937.cpp
 LOCAL_MODULE := libinit_msm8937
-LOCAL_STATIC_LIBRARIES := libbase
+LOCAL_STATIC_LIBRARIES := libbase libselinux
 
 include $(BUILD_STATIC_LIBRARY)

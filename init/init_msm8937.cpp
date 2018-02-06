@@ -40,6 +40,7 @@
 #include "util.h"
 
 using android::base::Trim;
+using android::init::property_set;
 
 static void init_alarm_boot_properties()
 {
