@@ -1,4 +1,3 @@
-ifneq ($(filter garlic wimlite hs2 hs3,$(TARGET_DEVICE)),)
 #
 # Copyright (C) 2017 The LineageOS Project
 #
