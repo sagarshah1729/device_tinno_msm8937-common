@@ -51,6 +51,7 @@ vendor.voice.voip.conc.disabled=false
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
+persist.bluetooth.bluetooth_audio_hal.disabled=true \
 bluetooth.hfp.client=1 \
 persist.bt.enable.multicast=1 \
 persist.bt.max.a2dp.connections=2 \
@@ -180,13 +181,13 @@ persist.vendor.radio.force_on_dc=true
 
 # SurfaceFlinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.surface_flinger.protected_contents=true
+ro.surface_flinger.protected_contents=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.early_phase_offset_ns=1500000 \
-    debug.sf.early_app_phase_offset_ns=1500000 \
-    debug.sf.early_gl_phase_offset_ns=3000000 \
-    debug.sf.early_gl_app_phase_offset_ns=15000000
+debug.sf.early_phase_offset_ns=1500000 \
+debug.sf.early_app_phase_offset_ns=1500000 \
+debug.sf.early_gl_phase_offset_ns=3000000 \
+debug.sf.early_gl_app_phase_offset_ns=15000000
 
 # SVI
 PRODUCT_PROPERTY_OVERRIDES += \
