@@ -132,7 +132,7 @@ PRODUCT_COPY_FILES += \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
 # Camera
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     camera.device@3.2-impl \
@@ -164,7 +164,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/data/netmgr_config.xml:system/etc/data/netmgr_config.xml
 
 # Fingerprint
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     fingerprint.msm8937
 
 # FM
